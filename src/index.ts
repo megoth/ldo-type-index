@@ -1,13 +1,17 @@
-import {manifestContext} from "@/ldo/manifest.context";
-import {manifestSchema} from "@/ldo/manifest.schema";
-import {DocumentShapeType, ManifestShapeType, SupportShapeType} from "@/ldo/manifest.shapeTypes";
+import {SolidProfile} from "@/ldo/profile.typings";
+import {profileContext} from "@/ldo/profile.context";
+import {profileSchema} from "@/ldo/profile.schema";
+import {SolidProfileShapeType} from "@/ldo/profile.shapeTypes";
 
-export type {Document, Manifest, Support} from "@/ldo/manifest.typings";
+export type {SolidProfile} from "@/ldo/profile.typings";
+
+function getName(profile: SolidProfile): string {
+    return profile.name || profile.fn || "[Unknown name]";
+}
 
 export default {
-    manifestContext,
-    manifestSchema,
-    DocumentShapeType,
-    ManifestShapeType,
-    SupportShapeType
+    getName,
+    profileContext,
+    profileSchema,
+    SolidProfileShapeType,
 };

@@ -1,19 +1,18 @@
 {
-  "name": "ldo-solid-app-manifest",
+  "name": "ldo-solid-profile",
   "version": "0.0.1",
-  "description": "Types for Solid app manifest",
+  "description": "Types for Solid profile, used with Linked Data Objects (LDO)",
   "browser": "dist/index.js",
   "types": "dist/types/src/index.d.ts",
   "scripts": {
     "build": "rollup -c",
-    "build:ldo": "src/ldo build --input ./shapes --output ./ldo",
+    "build:ldo": "ldo build --input ./shapes --output ./src/ldo",
     "lint": "eslint --fix './**/*.ts'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "Solid",
-    "app",
-    "manifest"
+    "profile"
   ],
   "author": "Arne Hassel",
   "license": "MIT",
