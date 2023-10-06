@@ -131,3 +131,9 @@ dist
 
 # Rollup
 .rollup.cache
+
+# Custom
+types
+index.js
+index.min.js
+tsconfig.tsbuildinfo

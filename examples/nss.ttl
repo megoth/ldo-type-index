@@ -1,0 +1,42 @@
+@prefix : </#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix solid: <http://www.w3.org/ns/solid/terms#> .
+@prefix space: <http://www.w3.org/ns/pim/space#> .
+@prefix stat: <http://www.w3.org/ns/posix/stat#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix storage: <> .
+@prefix container: </container/> .
+@prefix card: </profile/card#> .
+@prefix plain: <http://www.w3.org/ns/iana/media-types/text/plain#> .
+@prefix turtle: <http://www.w3.org/ns/iana/media-types/text/turtle#> .
+
+storage:
+    a ldp:BasicContainer, ldp:Container, space:Storage ;
+    dct:modified "2023-09-22T14:51:15Z"^^xsd:dateTime ;
+    ldp:contains
+        container:,
+        </plainTextResource>,
+        </turtleResource> ;
+    stat:mtime 1695394275.199 ;
+    stat:size 4096 .
+
+container:
+    a ldp:BasicContainer, ldp:Container, ldp:Resource ;
+    dct:modified "2023-01-25T10:40:21Z"^^xsd:dateTime ;
+    stat:mtime 1674643221.171 ;
+    stat:size 4096 .
+
+</plainTextResource>
+    a plain:Resource, ldp:Resource ;
+    dct:modified "2023-01-25T10:40:21Z"^^xsd:dateTime ;
+    stat:mtime 1674643221.171 ;
+    stat:size 4286 .
+
+</turtleResource>
+    a turtle:Resource, ldp:Resource ;
+    dct:modified "2023-01-25T10:40:21Z"^^xsd:dateTime ;
+    stat:mtime 1674643221.171 ;
+    stat:size 4286 .
+
+card:me solid:account storage: .
