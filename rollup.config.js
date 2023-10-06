@@ -20,41 +20,41 @@ const banner = `
 `;
 
 export default [
-    {
-        input: inputFileName,
-        output: [
-            {
-                name: moduleName,
-                file: pkg.browser,
-                format: "iife",
-                sourcemap: "inline",
-                banner,
-                extend: true,
-            },
-            {
-                name: moduleName,
-                file: pkg.browser.replace(".js", ".min.js"),
-                format: "iife",
-                sourcemap: "inline",
-                banner,
-                plugins: [terser()],
-                extend: true,
-            },
-        ],
-        plugins: [
-            pluginTypescript(),
-            pluginCommonjs({
-                extensions: [".js", ".ts"],
-            }),
-            babel({
-                babelHelpers: "bundled",
-                configFile: path.resolve(__dirname, ".babelrc.js"),
-            }),
-            pluginNodeResolve({
-                browser: true,
-            }),
-        ],
-    },
+    // {
+    //     input: inputFileName,
+    //     output: [
+    //         {
+    //             name: moduleName,
+    //             file: pkg.browser,
+    //             format: "iife",
+    //             sourcemap: "inline",
+    //             banner,
+    //             extend: true,
+    //         },
+    //         {
+    //             name: moduleName,
+    //             file: pkg.browser.replace(".js", ".min.js"),
+    //             format: "iife",
+    //             sourcemap: "inline",
+    //             banner,
+    //             plugins: [terser()],
+    //             extend: true,
+    //         },
+    //     ],
+    //     plugins: [
+    //         pluginTypescript(),
+    //         pluginCommonjs({
+    //             extensions: [".js", ".ts"],
+    //         }),
+    //         babel({
+    //             babelHelpers: "bundled",
+    //             configFile: path.resolve(__dirname, ".babelrc.js"),
+    //         }),
+    //         pluginNodeResolve({
+    //             browser: true,
+    //         }),
+    //     ],
+    // },
 
     // ES
     {
@@ -97,7 +97,8 @@ export default [
                 format: "cjs",
                 sourcemap: "inline",
                 banner,
-                exports: "default",
+                exports: "named",
+                // exports: "default",
                 extend: true,
             },
         ],
