@@ -1,0 +1,19 @@
+@prefix : <https://soliduser.example.net/profile/card#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix solid: <http://www.w3.org/ns/solid/terms#> .
+@prefix space: <http://www.w3.org/ns/pim/space#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+:me rdf:type schema:Person, foaf:Person ;
+    vcard:fn "Test Testersen" ;
+    foaf:name "Test Testersen" ;
+    ldp:inbox <https://soliduser.example.net/inbox/> ;
+    space:preferencesFile <https://soliduser.example.net/settings/prefs.ttl> ;
+    space:storage <https://soliduser.example.net/> ;
+    solid:account <https://soliduser.example.net/> ;
+    solid:oidcIssuer <https://solidcommunity.net> ;
+    solid:privateTypeIndex <https://soliduser.example.net/settings/privateTypeIndex.ttl> ;
+    solid:publicTypeIndex <https://soliduser.example.net/settings/publicTypeIndex.ttl> .
