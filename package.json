@@ -2,6 +2,7 @@
   "name": "ldo-solid-profile",
   "version": "0.0.3",
   "description": "Types for Solid profile, used with Linked Data Objects (LDO)",
+  "main": "index.js",
   "browser": "index.js",
   "types": "types/src/index.d.ts",
   "scripts": {
@@ -38,7 +39,6 @@
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   },
-  "main": "dist/index.js",
   "directories": {
     "example": "examples"
   },
