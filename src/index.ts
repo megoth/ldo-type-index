@@ -1,15 +1,15 @@
-import {TypeRegistrationShapeType} from "@/ldo/typeIndex.shapeTypes";
-import {TypeIndex} from "@/ldo/typeIndex.typings";
+import {TypeRegistrationShapeType} from "./ldo/typeIndex.shapeTypes";
+import {TypeIndex} from "./ldo/typeIndex.typings";
 import {createLdoDataset, getDataset, startTransaction, toSparqlUpdate} from "ldo";
 import {LdoBase} from "ldo/dist/util";
 import {namedNode} from "@rdfjs/data-model";
 import type {Term} from "@rdfjs/types/data-model"
-import {solid} from "@/vocabularies";
+import {solid} from "./vocabularies";
 
-export {typeIndexContext} from "@/ldo/typeIndex.context";
-export {typeIndexSchema} from "@/ldo/typeIndex.schema";
-export {TypeIndexShapeType, TypeRegistrationShapeType} from "@/ldo/typeIndex.shapeTypes";
-export type {TypeIndex, TypeRegistration} from "@/ldo/typeIndex.typings";
+export {typeIndexContext} from "./ldo/typeIndex.context";
+export {typeIndexSchema} from "./ldo/typeIndex.schema";
+export {TypeIndexShapeType, TypeRegistrationShapeType} from "./ldo/typeIndex.shapeTypes";
+export type {TypeIndex, TypeRegistration} from "./ldo/typeIndex.typings";
 export {solid};
 
 export async function update<T extends LdoBase>(subject: T, resourceUrl: string | null | undefined, fetch: (input: (RequestInfo | URL), init?: RequestInit) => Promise<Response>, updates?: (subject: T) => void): Promise<Response> {
