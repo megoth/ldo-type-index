@@ -1,4 +1,5 @@
-export { storageContext } from "@/ldo/storage.context";
-export { storageSchema } from "@/ldo/storage.schema";
-export { ContainerShapeType, ResourceShapeType } from "@/ldo/storage.shapeTypes";
-export type { Container, Resource } from "@/ldo/storage.typings";
+export { typeIndexContext } from "@/ldo/typeIndex.context";
+export { typeIndexSchema } from "@/ldo/typeIndex.schema";
+export { TypeIndexShapeType, TypeRegistrationShapeType } from "@/ldo/typeIndex.shapeTypes";
+export type { TypeIndex, TypeRegistration } from "@/ldo/typeIndex.typings";
+export { solid } from "@/vocabularies";

@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix solid: <http://www.w3.org/ns/solid/terms#> .
+@prefix todo: <https://icanhasweb.net/vocab/todo.ttl#> .
+
+<https://test.solidserver.net/settings/publicTypeIndex.ttl> rdf:type
+        solid:ListedDocument,
+        solid:TypeIndex .
+
+<https://test.solidserver.net/settings/publicTypeIndex.ttl#970935df-113b-4cff-a35a-aab3944ca6fd> rdf:type
+        solid:TypeRegistration ;
+    solid:forClass todo:TodoList ;
+    solid:instance <https://test.solidserver.net/todo.ttl> .

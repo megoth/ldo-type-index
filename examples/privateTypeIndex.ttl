@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <https://schema.org/> .
+@prefix solid: <http://www.w3.org/ns/solid/terms#> .
+
+<https://test.solidserver.net/settings/privateTypeIndex.ttl> rdf:type
+        solid:TypeIndex,
+        solid:UnlistedDocument .
+
+<https://test.solidserver.net/settings/privateTypeIndex.ttl#b8d64f8f-5e64-420a-9d51-be6dfeae0231> rdf:type
+        solid:TypeRegistration ;
+    solid:forClass schema:Recipe ;
+    solid:instanceContainer <https://test.solidserver.net/cookbook/> .

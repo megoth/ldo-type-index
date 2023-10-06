@@ -2,32 +2,34 @@ import { ContextDefinition } from "jsonld";
 
 /**
  * =============================================================================
- * Typescript Typings for storage
+ * Typescript Typings for typeIndex
  * =============================================================================
  */
 
 /**
- * Container Type
+ * TypeIndex Type
  */
-export interface Container {
-  "@id"?: string;
-  "@context"?: ContextDefinition;
-  type:
-    | {
-        "@id": "BasicContainer";
-      }
-    | {
-        "@id": "Container";
-      };
-}
-
-/**
- * Resource Type
- */
-export interface Resource {
+export interface TypeIndex {
   "@id"?: string;
   "@context"?: ContextDefinition;
   type: {
-    "@id": "Resource";
+    "@id": "TypeIndex";
+  };
+}
+
+/**
+ * TypeRegistration Type
+ */
+export interface TypeRegistration {
+  "@id"?: string;
+  "@context"?: ContextDefinition;
+  type: {
+    "@id": "TypeRegistration";
+  };
+  forClass: {
+    "@id": string;
+  };
+  instance: {
+    "@id": string;
   };
 }
