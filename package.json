@@ -1,6 +1,6 @@
 {
   "name": "ldo-type-index",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Types for Type Index, used with Linked Data Objects (LDO)",
   "main": "index.js",
   "browser": "index.js",
